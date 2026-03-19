@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Converter | Free Online Text Case Tool</title>
+<meta name="description" content="Case Converter Online helps you format text effortlessly. Convert to uppercase, lowercase, title case, and sentence case instantly with this reliable and efficient tool.">
+<meta name="keywords" content="case converter, text case converter, uppercase converter, lowercase converter, title case converter, camelCase converter, snake_case, kebab-case, PascalCase, online text tool, free text converter, word count tool">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="ANGzWHKNMIomLk5b39Z2uc893qFEoURh3VRKcYp3gsY" />
+<link rel="canonical" href="https://convertercase.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FDF8F3;--warm-white:#FFFCF8;--coral:#FF6B4A;--coral-light:#FFF0EC;--coral-mid:#FFBCAC;--teal:#2ABFBF;--teal-light:#E4FAF9;--mint:#6DD5B4;--mint-light:#E8F9F3;--gold:#F5A623;--gold-light:#FFF8EC;--plum:#C084FC;--plum-light:#F5EEFF;--sky:#60A5FA;--sky-light:#EFF6FF;--border:#E8DDD4;--slate:#3D4A5C;--slate-mid:#6B7A8D;--slate-light:#B0BFCE;--shadow-sm:0 2px 8px rgba(61,74,92,.07);--shadow-md:0 6px 24px rgba(61,74,92,.10);--shadow-lg:0 16px 48px rgba(61,74,92,.13);--r:16px;--rs:10px;--section-y:72px;--hero-converter-gap:28px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--slate);overflow-x:hidden;line-height:1.6}
+
+/* NAV */
+nav{background:rgba(255,252,248,.95);border-bottom:1.5px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:200;backdrop-filter:blur(14px)}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;color:var(--slate);letter-spacing:-.5px;text-decoration:none}
+.logo span{color:var(--coral)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--slate-mid);font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--coral)}
+.nav-cta{background:var(--coral);color:#fff;font-size:.78rem;font-weight:700;padding:8px 20px;border-radius:50px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(255,107,74,.35)}
+
+/* HERO */
+.hero{text-align:center;padding:66px 5% 38px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(255,188,172,.22) 0%,rgba(253,248,243,0) 68%);pointer-events:none}
+.hero>*{position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--coral-light);color:var(--coral);font-size:.76rem;font-weight:700;padding:5px 16px;border-radius:50px;border:1.5px solid var(--coral-mid);margin-bottom:22px;letter-spacing:.8px;text-transform:uppercase}
+.eyebrow.teal{background:var(--teal-light);color:var(--teal);border-color:var(--teal)}
+.eyebrow.gold{background:var(--gold-light);color:var(--gold);border-color:var(--gold)}
+.eyebrow.plum{background:var(--plum-light);color:var(--plum);border-color:var(--plum)}
+.eyebrow.mint{background:var(--mint-light);color:#1A9E6F;border-color:var(--mint)}
+.eyebrow.sky{background:var(--sky-light);color:#2563EB;border-color:var(--sky)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5.2vw,4.2rem);font-weight:900;line-height:1.08;color:var(--slate);max-width:700px;margin:0 auto 20px;letter-spacing:-1px}
+.hero h1 em{font-style:italic;color:var(--coral)}
+.hero-desc{color:var(--slate-mid);font-size:1.06rem;max-width:560px;margin:0 auto 22px;line-height:1.75}
+.hero-desc a{color:var(--coral);font-weight:600;text-decoration:none}
+.hero-desc a:hover{color:var(--slate)}
+.hero-divider{width:40px;height:3px;background:var(--coral);border-radius:4px;margin:18px auto 0}
+
+/* SECTIONS */
+.sw{padding:var(--section-y) 5%;max-width:1200px;margin:0 auto}
+.sw-bg{padding:var(--section-y) 5%}
+.sw-bg .inner{max-width:1200px;margin:0 auto}
+.bg-warm{background:var(--warm-white);border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border)}
+.sec-title{font-family:'Fraunces',serif;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700;color:var(--slate);margin-bottom:10px;line-height:1.2;letter-spacing:-.5px}
+.sec-sub{color:var(--slate-mid);font-size:.97rem;margin-bottom:36px;max-width:580px;line-height:1.7}
+.centered{text-align:center}.centered .sec-sub{margin-left:auto;margin-right:auto}
+
+/* CONVERTER */
+.conv-section{padding:var(--hero-converter-gap) 5% var(--section-y);max-width:1200px;margin:0 auto}
+.conv-card{background:var(--warm-white);border:1.5px solid var(--border);border-radius:24px;box-shadow:var(--shadow-lg);overflow:hidden}
+.case-hdr{padding:24px 28px 0;border-bottom:1.5px solid var(--border)}
+.case-lbl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--slate-mid);margin-bottom:14px}
+.case-btns{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:20px}
+.cb{padding:8px 16px;border-radius:50px;border:1.5px solid var(--border);background:var(--cream);color:var(--slate);font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+.cb:hover{border-color:var(--coral);color:var(--coral);background:var(--coral-light);transform:translateY(-1px);box-shadow:0 3px 10px rgba(255,107,74,.15)}
+.cb.active{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 4px 14px rgba(255,107,74,.3)}
+.cb .bdg{background:var(--teal);color:#fff;font-size:.58rem;padding:1px 5px;border-radius:4px;margin-left:4px;font-weight:700;letter-spacing:.3px;vertical-align:middle}
+.ta-grid{display:grid;grid-template-columns:1fr 1fr}
+.ta-pane{padding:24px 28px}
+.ta-pane:first-child{border-right:1.5px solid var(--border)}
+.pane-lbl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--slate-mid);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.dot-i{background:var(--teal)}.dot-o{background:var(--coral)}
+textarea{width:100%;height:220px;border:1.5px solid var(--border);border-radius:var(--r);padding:16px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--slate);background:var(--cream);resize:vertical;line-height:1.7;transition:border-color .2s,box-shadow .2s;outline:none}
+textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(42,191,191,.12)}
+#outputText{background:#F9F6F2;cursor:default}
+.stats-bar{display:flex;align-items:center;gap:18px;padding:14px 28px;background:var(--cream);border-top:1.5px solid var(--border);flex-wrap:wrap}
+.sc{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--slate-mid);font-weight:500}
+.sc strong{color:var(--slate);font-size:.9rem;font-weight:700}
+.act-bar{display:flex;align-items:center;gap:10px;padding:18px 28px;border-top:1.5px solid var(--border);flex-wrap:wrap}
+.abn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.83rem;font-weight:600;cursor:pointer;border:1.5px solid;transition:all .2s}
+.abn:hover{transform:translateY(-1px)}
+.btn-copy{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 3px 10px rgba(42,191,191,.25)}
+.btn-copy:hover{box-shadow:0 5px 18px rgba(42,191,191,.35)}
+.btn-dl{background:var(--gold-light);border-color:var(--gold);color:var(--gold)}
+.btn-dl:hover{background:var(--gold);color:#fff}
+.btn-clr{background:var(--warm-white);border-color:var(--border);color:var(--slate-mid)}
+.btn-clr:hover{border-color:var(--slate-mid);color:var(--slate)}
+.btn-swp{background:var(--plum-light);border-color:var(--plum);color:var(--plum)}
+.btn-swp:hover{background:var(--plum);color:#fff}
+.btn-spc{background:var(--teal-light);border-color:var(--teal);color:var(--teal)}
+.btn-spc:hover{background:var(--teal);color:#fff}
+.act-sp{flex:1}
+.cpfb{font-size:.8rem;color:var(--teal);font-weight:600;opacity:0;transition:opacity .3s}
+.cpfb.show{opacity:1}
+.fr-tog{padding:12px 28px;border-top:1.5px solid var(--border);display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;font-size:.83rem;font-weight:600;color:var(--slate-mid);transition:color .2s}
+.fr-tog:hover{color:var(--coral)}
+.fr-panel{display:none;padding:16px 28px 20px;background:var(--coral-light);border-top:1.5px solid var(--coral-mid);gap:12px;flex-wrap:wrap;align-items:flex-end}
+.fr-panel.open{display:flex}
+.fr-f{display:flex;flex-direction:column;gap:5px;flex:1;min-width:140px}
+.fr-f label{font-size:.72rem;font-weight:700;color:var(--coral);text-transform:uppercase;letter-spacing:.8px}
+.fr-f input{padding:9px 14px;border:1.5px solid var(--coral-mid);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--slate);background:#fff;outline:none;transition:border-color .2s}
+.fr-f input:focus{border-color:var(--coral)}
+.btn-rep{background:var(--coral);border:none;color:#fff;padding:10px 22px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;align-self:flex-end;margin-bottom:1px}
+.btn-rep:hover{box-shadow:0 4px 14px rgba(255,107,74,.3);transform:translateY(-1px)}
+
+/* WORD FREQ */
+.freq-card{background:var(--warm-white);border:1.5px solid var(--border);border-radius:20px;padding:28px;box-shadow:var(--shadow-sm)}
+.freq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;max-height:220px;overflow-y:auto}
+.fi{background:var(--cream);border:1.5px solid var(--border);border-radius:var(--rs);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.fi .fw{font-weight:600;color:var(--slate);overflow:hidden;max-width:80px;white-space:nowrap;text-overflow:ellipsis}
+.fi .fc{background:var(--coral);color:#fff;font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:20px}
+.freq-empty{color:var(--slate-light);font-style:italic;font-size:.9rem;grid-column:1/-1;text-align:center;padding:32px}
+
+/* HOW TO */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.step-card{background:var(--warm-white);border:1.5px solid var(--border);border-radius:18px;padding:28px 22px;text-align:center;transition:transform .2s,box-shadow .2s}
+.step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.step-num{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:900;line-height:1;margin-bottom:14px}
+.step-card:nth-child(1) .step-num{color:var(--coral)}
+.step-card:nth-child(2) .step-num{color:var(--teal)}
+.step-card:nth-child(3) .step-num{color:var(--gold)}
+.step-card:nth-child(4) .step-num{color:var(--plum)}
+.step-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.step-card p{font-size:.85rem;color:var(--slate-mid);line-height:1.6}
+
+/* FEATURES */
+.feat-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:60px}
+.feat-txt h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px}
+.feat-txt p{color:var(--slate-mid);line-height:1.8;font-size:.97rem}
+.feat-mock{background:var(--cream);border:1.5px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow-md)}
+.mock-row{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.mt{padding:5px 12px;border-radius:50px;font-size:.78rem;font-weight:600;border:1.5px solid}
+.mt.c{background:var(--coral-light);border-color:var(--coral-mid);color:var(--coral)}
+.mt.t{background:var(--teal-light);border-color:var(--teal);color:var(--teal)}
+.mt.g{background:var(--gold-light);border-color:var(--gold);color:var(--gold)}
+.mt.p{background:var(--plum-light);border-color:var(--plum);color:var(--plum)}
+.mock-out{margin-top:16px;padding:16px;background:#fff;border-radius:12px;border:1.5px solid var(--border);font-family:'Courier New',monospace;font-size:.83rem;color:var(--slate);line-height:1.9}
+.mock-out .hl{color:var(--coral);font-weight:700}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fc2{background:var(--cream);border:1.5px solid var(--border);border-radius:18px;padding:24px;transition:transform .2s,box-shadow .2s}
+.fc2:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.ficon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
+.fi-c{background:var(--coral-light)}.fi-t{background:var(--teal-light)}.fi-g{background:var(--gold-light)}.fi-p{background:var(--plum-light)}.fi-m{background:var(--mint-light)}.fi-s{background:var(--sky-light)}
+.fc2 h3{font-size:1rem;font-weight:700;margin-bottom:7px;color:var(--slate)}
+.fc2 p{font-size:.85rem;color:var(--slate-mid);line-height:1.6}
+
+/* DEEP DIVE */
+.dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.ddc{background:var(--cream);border:1.5px solid var(--border);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
+.ddc:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.ddc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.ddc-name{font-weight:700;font-size:.95rem;color:var(--slate)}
+.ddc-tag{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:20px;border:1.5px solid;text-transform:uppercase;letter-spacing:.5px}
+.ddc-tag.dev{background:var(--teal-light);color:var(--teal);border-color:var(--teal)}
+.ddc-tag.wr{background:var(--coral-light);color:var(--coral);border-color:var(--coral-mid)}
+.ddc-tag.fn{background:var(--plum-light);color:var(--plum);border-color:var(--plum)}
+.ddc-ex{font-family:'Courier New',monospace;font-size:.88rem;background:#fff;border:1.5px solid var(--border);border-radius:9px;padding:9px 13px;color:var(--coral);margin-bottom:11px;font-weight:600}
+.ddc p{font-size:.83rem;color:var(--slate-mid);line-height:1.6}
+.ddc-uses{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.dut{font-size:.7rem;background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:2px 9px;color:var(--slate-mid);font-weight:500}
+
+/* USE CASES */
+.uc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.ucc{border-radius:18px;padding:28px;border:1.5px solid;transition:transform .2s,box-shadow .2s}
+.ucc:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.ucc.a{background:var(--coral-light);border-color:var(--coral-mid)}
+.ucc.b{background:var(--teal-light);border-color:var(--teal)}
+.ucc.c{background:var(--gold-light);border-color:var(--gold)}
+.ucc.d{background:var(--plum-light);border-color:var(--plum)}
+.ucc.e{background:var(--mint-light);border-color:var(--mint)}
+.ucc.f{background:var(--sky-light);border-color:var(--sky)}
+.ucc-icon{font-size:1.7rem;margin-bottom:12px}
+.ucc h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--slate)}
+.ucc p{font-size:.85rem;color:var(--slate-mid);line-height:1.65}
+.ucc ul{margin-top:10px;padding-left:16px;font-size:.82rem;color:var(--slate-mid);line-height:1.7}
+
+/* COMPARE */
+.cmp-table{width:100%;border-collapse:collapse;margin-top:36px;font-size:.88rem;border-radius:16px;overflow:hidden;border:1.5px solid var(--border)}
+.cmp-table th{padding:14px 20px;text-align:left;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--slate-mid);background:var(--cream)}
+.cmp-table th.hl{background:var(--coral-light);color:var(--coral)}
+.cmp-table td{padding:13px 20px;border-top:1.5px solid var(--border);color:var(--slate);vertical-align:middle}
+.cmp-table td.hl{background:rgba(255,240,236,.4);font-weight:600}
+.cmp-table tr:hover td{background:var(--cream)}
+.cmp-table tr:hover td.hl{background:var(--coral-light)}
+.chk{color:#22C55E;font-size:1.1rem}.crs{color:#EF4444;font-size:1.1rem}.prt{color:var(--gold);font-size:1rem}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.tip-card{background:var(--warm-white);border:1.5px solid var(--border);border-radius:18px;padding:26px;display:flex;gap:18px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
+.tip-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.tip-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.tip-card h3{font-size:.97rem;font-weight:700;margin-bottom:7px;color:var(--slate)}
+.tip-card p{font-size:.85rem;color:var(--slate-mid);line-height:1.65}
+
+/* REFERENCE TABLE */
+.ref-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:.88rem;border-radius:16px;overflow:hidden;border:1.5px solid var(--border)}
+.ref-table th{background:var(--cream);border-bottom:1.5px solid var(--border);padding:12px 18px;text-align:left;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--slate-mid)}
+.ref-table td{border-bottom:1.5px solid var(--border);padding:13px 18px;color:var(--slate);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table tr:hover td{background:var(--cream)}
+.ref-table code,.faq-a-inner code{font-family:'Courier New',monospace;background:var(--coral-light);border:1px solid var(--coral-mid);padding:2px 8px;border-radius:5px;font-size:.84rem;color:var(--coral)}
+
+/* RELATED TOOLS */
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.tool-card{background:var(--warm-white);border:1.5px solid var(--border);border-radius:16px;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.tool-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--coral)}
+.tool-icon{font-size:1.8rem;margin-bottom:10px;display:block}
+.tool-card h3{font-size:.9rem;font-weight:700;color:var(--slate);margin-bottom:5px}
+.tool-card p{font-size:.78rem;color:var(--slate-mid);line-height:1.55}
+.soon{display:inline-block;background:var(--gold-light);color:var(--gold);border:1px solid var(--gold);font-size:.65rem;font-weight:700;padding:1px 7px;border-radius:10px;margin-top:7px;letter-spacing:.4px;text-transform:uppercase}
+
+/* FAQ */
+.faq-list{margin-top:40px}
+.faq-item{border:1.5px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;background:var(--warm-white);transition:box-shadow .2s}
+.faq-item:hover{box-shadow:var(--shadow-sm)}
+.faq-q{padding:18px 22px;font-weight:600;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color .2s}
+.faq-q:hover{color:var(--coral)}
+.faq-q .arr{font-size:1rem;transition:transform .3s;color:var(--slate-light);flex-shrink:0}
+.faq-item.open .faq-q .arr{transform:rotate(180deg);color:var(--coral)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:.9rem;color:var(--slate-mid);line-height:1.75}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:14px 22px 18px;border-top:1.5px solid var(--border)}
+
+/* CTA BANNER */
+.cta-wrap{padding:0 5% var(--section-y);max-width:1200px;margin:0 auto}
+.cta-banner{background:linear-gradient(135deg,#FFF0EC 0%,#FDF8F3 50%,#E4FAF9 100%);border:1.5px solid var(--border);border-radius:24px;padding:64px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,188,172,.25) 0%,transparent 70%);pointer-events:none}
+.cta-banner::after{content:'';position:absolute;bottom:-60px;left:-60px;width:250px;height:250px;background:radial-gradient(circle,rgba(42,191,191,.15) 0%,transparent 70%);pointer-events:none}
+.cta-banner>*{position:relative}
+.cta-banner h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;color:var(--slate);margin-bottom:12px;letter-spacing:-.5px}
+.cta-banner p{color:var(--slate-mid);font-size:1rem;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta-p{background:var(--coral);color:#fff;padding:13px 32px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(255,107,74,.3)}
+.cta-p:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(255,107,74,.4)}
+.cta-s{background:var(--warm-white);color:var(--slate);padding:13px 32px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border);transition:all .2s}
+.cta-s:hover{border-color:var(--slate);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--warm-white);border-top:1.5px solid var(--border);padding:52px 5% 28px}
+.foot-inner{max-width:1200px;margin:0 auto}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:var(--slate);margin-bottom:12px;display:block;text-decoration:none}
+.foot-logo span{color:var(--coral)}
+.foot-brand p{font-size:.85rem;color:var(--slate-mid);line-height:1.7;max-width:280px;margin-bottom:16px}
+.foot-badges{display:flex;gap:8px;flex-wrap:wrap}
+.foot-badge{background:var(--cream);border:1.5px solid var(--border);border-radius:50px;padding:4px 12px;font-size:.75rem;font-weight:600;color:var(--slate-mid)}
+.foot-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--slate-mid);margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col ul a{text-decoration:none;font-size:.85rem;color:var(--slate-mid);transition:color .2s}
+.foot-col ul a:hover{color:var(--coral)}
+.foot-btm{border-top:1.5px solid var(--border);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot-btm p{font-size:.78rem;color:var(--slate-light)}
+.foot-btm-links{display:flex;gap:20px}
+.foot-btm-links a{font-size:.78rem;color:var(--slate-light);text-decoration:none;transition:color .2s}
+.foot-btm-links a:hover{color:var(--coral)}
+
+/* TOAST & BACK-TOP */
+.toast{position:fixed;bottom:28px;right:28px;background:var(--teal);color:#fff;padding:12px 22px;border-radius:50px;font-size:.87rem;font-weight:600;box-shadow:var(--shadow-md);z-index:999;transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1}
+.back-top{position:fixed;bottom:28px;left:28px;width:42px;height:42px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow-sm);transition:all .2s;z-index:999;opacity:0;pointer-events:none}
+.back-top.vis{opacity:1;pointer-events:all}
+.back-top:hover{background:var(--coral-light);border-color:var(--coral)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.conv-card{animation:fadeUp .5s ease .1s both}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .ta-grid{grid-template-columns:1fr}
+  .ta-pane:first-child{border-right:none;border-bottom:1.5px solid var(--border)}
+  .feat-top{grid-template-columns:1fr;gap:32px}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr 1fr}
+  .uc-grid{grid-template-columns:1fr 1fr}
+  .dd-grid{grid-template-columns:1fr 1fr}
+  .tools-grid{grid-template-columns:1fr 1fr}
+  .tips-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:580px){
+  .feat-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  .uc-grid{grid-template-columns:1fr}
+  .dd-grid{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:1fr 1fr}
+  .act-bar{flex-direction:column;align-items:flex-start}
+  .hero{padding:52px 5% 26px}
+  .hero .eyebrow{margin-bottom:16px}
+  .hero h1{margin:0 auto 14px}
+  .hero h1 br{display:none}
+  .hero-desc{margin:0 auto 20px}
+  .hero-divider{margin:16px auto 0}
+  .cta-banner{padding:40px 24px}
+  .foot-top{grid-template-columns:1fr}
+  .foot-btm{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="logo">Case <span>Converter</span></a>
+  <ul class="nav-links">
+    <li><a href="#converter">Converter</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#case-formats">Case Formats</a></li>
+    <li><a href="#use-cases">Use Cases</a></li>
+    <li><a href="#tips">Tips</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#converter" class="nav-cta">Convert Now →</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="eyebrow">Convert Uppercase to Lowercase</div>
+  <h1>Case Converter Online</h1>
+  <p class="hero-desc">Our <a href="https://caseconv.co/" target="_blank" rel="noopener noreferrer">Case Converter</a> Online helps you quickly change text into uppercase, lowercase, title case, or sentence case. This free and easy-to-use tool is perfect for writers, students, and professionals.</p>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ══ CONVERTER TOOL ══ -->
+<section class="conv-section" id="converter">
+  <div class="conv-card">
+    <div class="case-hdr">
+      <div class="case-lbl">Select Conversion Type</div>
+      <div class="case-btns">
+        <button class="cb active" data-case="upper">UPPER CASE</button>
+        <button class="cb" data-case="lower">lower case</button>
+        <button class="cb" data-case="title">Title Case</button>
+        <button class="cb" data-case="sentence">Sentence case</button>
+        <button class="cb" data-case="camel">camelCase <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="pascal">PascalCase <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="snake">snake_case <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="kebab">kebab-case <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="constant">CONSTANT_CASE <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="dot">dot.case <span class="bdg">DEV</span></button>
+        <button class="cb" data-case="alternate">aLtErNaTiNg</button>
+        <button class="cb" data-case="inverse">iNVERSE</button>
+      </div>
+    </div>
+    <div class="ta-grid">
+      <div class="ta-pane">
+        <div class="pane-lbl"><span class="dot dot-i"></span> Input Text</div>
+        <textarea id="inputText" placeholder="Paste or type your text here…" spellcheck="false"></textarea>
+      </div>
+      <div class="ta-pane">
+        <div class="pane-lbl"><span class="dot dot-o"></span> Converted Output</div>
+        <textarea id="outputText" readonly placeholder="Your converted text will appear here…"></textarea>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="sc">📝 Characters: <strong id="charCount">0</strong></div>
+      <div class="sc">🔤 Words: <strong id="wordCount">0</strong></div>
+      <div class="sc">📄 Sentences: <strong id="sentCount">0</strong></div>
+      <div class="sc">📋 Lines: <strong id="lineCount">0</strong></div>
+      <div class="sc">⏱️ Read time: <strong id="readTime">0s</strong></div>
+      <div class="sc">🔡 Unique words: <strong id="uniqueCount">0</strong></div>
+    </div>
+    <div class="act-bar">
+      <button class="abn btn-copy" onclick="copyOutput()">📋 Copy Output</button>
+      <button class="abn btn-dl" onclick="downloadOutput()">⬇️ Download .txt</button>
+      <button class="abn btn-swp" onclick="swapText()">⇄ Swap</button>
+      <button class="abn btn-spc" onclick="removeSpaces()">✂️ Trim Spaces</button>
+      <button class="abn btn-clr" onclick="clearAll()">🗑️ Clear All</button>
+      <div class="act-sp"></div>
+      <span class="cpfb" id="cpfb">✓ Copied!</span>
+    </div>
+    <div class="fr-tog" onclick="toggleFR()">🔍 Find &amp; Replace <span id="frArrow" style="margin-left:4px">▾</span></div>
+    <div class="fr-panel" id="frPanel">
+      <div class="fr-f"><label>Find</label><input id="frFind" type="text" placeholder="Word to find…"></div>
+      <div class="fr-f"><label>Replace with</label><input id="frReplace" type="text" placeholder="Replace with…"></div>
+      <button class="btn-rep" onclick="doReplace()">Replace All</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WORD FREQUENCY ══ -->
+<section class="sw" id="word-freq">
+  <div class="centered">
+    <div class="eyebrow teal">Word Intelligence</div>
+    <div class="sec-title">Word Frequency Analyser</div>
+    <div class="sec-sub">See which words appear most often, perfect for SEO keyword density checks, detecting repetition, and improving writing clarity.</div>
+  </div>
+  <div class="freq-card">
+    <div class="freq-grid" id="freqGrid">
+      <div class="freq-empty">Start typing in the converter above to see word frequency analysis.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="sw-bg bg-warm" id="how-to-use">
+  <div class="inner centered">
+    <div class="eyebrow">Quick Start</div>
+    <div class="sec-title">Convert Text in 4 Simple Steps</div>
+    <div class="sec-sub">No learning curve. No sign up. Just paste, pick a format, and copy.</div>
+  </div>
+  <div class="inner">
+    <div class="how-grid">
+      <div class="step-card"><div class="step-num">01</div><h3>Paste Your Text</h3><p>Type or paste any text, from documents, code, emails, spreadsheets, or anywhere else you need.</p></div>
+      <div class="step-card"><div class="step-num">02</div><h3>Choose a Format</h3><p>Click any of the 12 case format buttons. The output updates in real time as you type or switch formats.</p></div>
+      <div class="step-card"><div class="step-num">03</div><h3>Refine if Needed</h3><p>Use Find & Replace to swap phrases, Trim Spaces to clean whitespace, or Swap to flip input and output.</p></div>
+      <div class="step-card"><div class="step-num">04</div><h3>Copy or Download</h3><p>Hit "Copy Output" to grab it instantly, or download as a .txt file. Done, with zero sign up required.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section class="sw" id="features">
+  <div class="feat-top">
+    <div class="feat-txt">
+      <div class="eyebrow">What's Included</div>
+      <h2>Everything a Developer, Writer or Marketer Needs</h2>
+      <p>Case Converter packs every text transformation you'll ever need into one distraction free interface. Whether you're cleaning data, formatting identifiers, or polishing copy, it's all here, all free, all instant.</p>
+    </div>
+    <div class="feat-mock">
+      <div class="mock-row"><span class="mt c">UPPER CASE</span><span class="mt t">camelCase</span><span class="mt g">snake_case</span><span class="mt p">PascalCase</span></div>
+      <div class="mock-row"><span class="mt t">Title Case</span><span class="mt c">kebab-case</span><span class="mt g">dot.case</span><span class="mt p">CONSTANT_CASE</span></div>
+      <div class="mock-out">Input: <em>"hello world example"</em><br>camelCase → <span class="hl">helloWorldExample</span><br>snake_case → <span class="hl">hello_world_example</span><br>PascalCase → <span class="hl">HelloWorldExample</span><br>CONSTANT → <span class="hl">HELLO_WORLD_EXAMPLE</span></div>
+    </div>
+  </div>
+  <div class="feat-grid">
+    <div class="fc2"><div class="ficon fi-c">🔡</div><h3>12 Case Formats</h3><p>Upper, lower, title, sentence, camel, Pascal, snake, kebab, constant, dot, alternating and inverse, all one click.</p></div>
+    <div class="fc2"><div class="ficon fi-t">📊</div><h3>Live Text Statistics</h3><p>Real time character count, word count, sentence count, unique words, line count, and estimated reading time.</p></div>
+    <div class="fc2"><div class="ficon fi-g">🔍</div><h3>Find &amp; Replace</h3><p>Built in find and replace swaps words or phrases instantly, with no need to open a separate editor.</p></div>
+    <div class="fc2"><div class="ficon fi-p">📈</div><h3>Word Frequency Analysis</h3><p>Visualise your most-used words to spot repetition, check keyword density for SEO, or assess writing clarity.</p></div>
+    <div class="fc2"><div class="ficon fi-m">⬇️</div><h3>Download as .txt</h3><p>Save your converted text as a plain text file instantly, ideal for batch processing and archiving.</p></div>
+    <div class="fc2"><div class="ficon fi-s">✂️</div><h3>Smart Space Trimmer</h3><p>Removes double spaces, leading/trailing whitespace, and normalises all spacing in one click.</p></div>
+  </div>
+</section>
+
+<!-- ══ CASE FORMAT DEEP DIVE ══ -->
+<section class="sw-bg bg-warm" id="case-formats">
+  <div class="inner centered">
+    <div class="eyebrow plum">Format Guide</div>
+    <div class="sec-title">Every Case Format Explained</div>
+    <div class="sec-sub">A detailed guide to all 12 case types with examples, use cases, and the languages and contexts where each is standard.</div>
+  </div>
+  <div class="inner">
+    <div class="dd-grid">
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">UPPER CASE</span><span class="ddc-tag wr">Writing</span></div><div class="ddc-ex">HELLO WORLD EXAMPLE</div><p>Converts every character to uppercase. Used for strong emphasis, headings, acronyms, and as a formatting convention for constants in many languages.</p><div class="ddc-uses"><span class="dut">Headings</span><span class="dut">Constants</span><span class="dut">Acronyms</span><span class="dut">Emphasis</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">lower case</span><span class="ddc-tag wr">Writing</span></div><div class="ddc-ex">hello world example</div><p>Converts every character to lowercase. Essential for normalising text, formatting email addresses, URL components, and database values before processing.</p><div class="ddc-uses"><span class="dut">URLs</span><span class="dut">Emails</span><span class="dut">Normalisation</span><span class="dut">CSS</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">Title Case</span><span class="ddc-tag wr">Writing</span></div><div class="ddc-ex">Hello World Example</div><p>Capitalises the first letter of every word. Standard for article titles, blog headings, SEO meta titles, page names, and navigation labels.</p><div class="ddc-uses"><span class="dut">Blog titles</span><span class="dut">H1 and H2 tags</span><span class="dut">SEO</span><span class="dut">Nav items</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">Sentence case</span><span class="ddc-tag wr">Writing</span></div><div class="ddc-ex">Hello world example</div><p>Capitalises only the first word. Mirrors standard written sentences, ideal for body copy, UI button labels, descriptions, and error messages.</p><div class="ddc-uses"><span class="dut">Body text</span><span class="dut">UI labels</span><span class="dut">Descriptions</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">camelCase</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">helloWorldExample</div><p>Removes spaces, capitalises subsequent words, starts with a lowercase letter. The dominant naming convention in JavaScript, Java, Swift, and TypeScript for variables and functions.</p><div class="ddc-uses"><span class="dut">JavaScript</span><span class="dut">Java</span><span class="dut">Swift</span><span class="dut">Variables</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">PascalCase</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">HelloWorldExample</div><p>Like camelCase but starts with uppercase. The standard for class names, React components, TypeScript interfaces, C# types, and constructor functions.</p><div class="ddc-uses"><span class="dut">React</span><span class="dut">C#</span><span class="dut">Classes</span><span class="dut">TypeScript</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">snake_case</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">hello_world_example</div><p>Replaces spaces with underscores, all lowercase. Standard in Python (PEP 8), Ruby, database column names, and file naming in most Unix-based systems.</p><div class="ddc-uses"><span class="dut">Python</span><span class="dut">Ruby</span><span class="dut">SQL</span><span class="dut">File names</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">kebab-case</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">hello-world-example</div><p>Replaces spaces with hyphens, all lowercase. Used for HTML/CSS class names, SEO friendly URL slugs, CLI flags, and JSON keys in many REST APIs.</p><div class="ddc-uses"><span class="dut">CSS classes</span><span class="dut">URL slugs</span><span class="dut">HTML attrs</span><span class="dut">REST API</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">CONSTANT_CASE</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">HELLO_WORLD_EXAMPLE</div><p>All uppercase with underscores. The universal convention for constants and environment variables across virtually every programming language and platform.</p><div class="ddc-uses"><span class="dut">Constants</span><span class="dut">.env files</span><span class="dut">Config</span><span class="dut">Macros</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">dot.case</span><span class="ddc-tag dev">Developer</span></div><div class="ddc-ex">hello.world.example</div><p>Joins words with dots in lowercase. Used for configuration file keys, Java and Kotlin package naming, and logging systems that use dotted namespaces.</p><div class="ddc-uses"><span class="dut">Config keys</span><span class="dut">Java packages</span><span class="dut">Namespaces</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">aLtErNaTiNg</span><span class="ddc-tag fn">Creative</span></div><div class="ddc-ex">hElLo WoRlD eXaMpLe</div><p>Alternates lowercase and uppercase on each character. Originated in meme culture for mocking or sarcastic quoting, now a recognised creative typographic style.</p><div class="ddc-uses"><span class="dut">Memes</span><span class="dut">Social media</span><span class="dut">Humour</span></div></div>
+      <div class="ddc"><div class="ddc-top"><span class="ddc-name">iNVERSE case</span><span class="ddc-tag fn">Creative</span></div><div class="ddc-ex">hELLO wORLD eXAMPLE</div><p>Flips the case of every character: uppercase becomes lowercase and vice versa. Useful for creative design, typographic contrast, and quirky text effects.</p><div class="ddc-uses"><span class="dut">Design</span><span class="dut">Creative text</span><span class="dut">Typography</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ USE CASES ══ -->
+<section class="sw" id="use-cases">
+  <div class="centered">
+    <div class="eyebrow">Who Uses Case Converter</div>
+    <div class="sec-title">Built for Every Professional</div>
+    <div class="sec-sub">From developers to content creators, here is how different professionals use Case Converter every single day.</div>
+  </div>
+  <div class="uc-grid">
+    <div class="ucc a"><div class="ucc-icon">👨‍💻</div><h3>Software Developers</h3><p>Switch variable names between frameworks and languages instantly, with no manual reformatting.</p><ul><li>Convert API responses to camelCase for JS</li><li>Format Python variables with snake_case</li><li>Generate CONSTANT_CASE env variable names</li><li>Build CSS class names in kebab-case</li></ul></div>
+    <div class="ucc b"><div class="ucc-icon">✍️</div><h3>Content Writers</h3><p>Fix capitalisation inconsistencies across entire articles or pasted drafts in seconds.</p><ul><li>Format blog post headings in Title Case</li><li>Fix ALL-CAPS text pasted from emails</li><li>Normalise section titles consistently</li><li>Check keyword repetition with word freq</li></ul></div>
+    <div class="ucc c"><div class="ucc-icon">🎯</div><h3>SEO Specialists</h3><p>Optimise meta titles, slugs, and headings faster with built-in analysis tools.</p><ul><li>Format meta titles in proper Title Case</li><li>Create URL slugs with kebab-case</li><li>Analyse keyword density in seconds</li><li>Standardise heading capitalisation</li></ul></div>
+    <div class="ucc d"><div class="ucc-icon">📊</div><h3>Data Analysts</h3><p>Normalise messy datasets and format column names for databases or spreadsheets.</p><ul><li>Standardise column headers with snake_case</li><li>Clean inconsistently cased CSV exports</li><li>Format field names for SQL databases</li><li>Batch process variable name formatting</li></ul></div>
+    <div class="ucc e"><div class="ucc-icon">🎨</div><h3>UI/UX Designers</h3><p>Keep button labels, nav items, and UI copy consistently formatted across all mockups.</p><ul><li>Standardise CTA button text globally</li><li>Format navigation link labels precisely</li><li>Ensure consistent heading case in Figma</li><li>Clean up copy from client briefs</li></ul></div>
+    <div class="ucc f"><div class="ucc-icon">📚</div><h3>Students &amp; Academics</h3><p>Format citations, reference lists, and chapter headings consistently throughout papers.</p><ul><li>Fix capitalisation in pasted references</li><li>Format dissertation chapter headings</li><li>Check word counts against essay limits</li><li>Standardise bibliography entries</li></ul></div>
+  </div>
+</section>
+
+<!-- ══ COMPARISON TABLE ══ -->
+<section class="sw-bg bg-warm" id="comparison">
+  <div class="inner centered">
+    <div class="eyebrow gold">Why Case Converter</div>
+    <div class="sec-title">Case Converter vs The Alternatives</div>
+    <div class="sec-sub">See exactly how Case Converter compares against manual editing, code editors, and other online tools.</div>
+  </div>
+  <div class="inner">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="hl">✦ Case Converter</th>
+          <th>Manual Editing</th>
+          <th>VS Code / Editor</th>
+          <th>Other Online Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>12 case format types</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="prt">~ Some</span></td><td><span class="prt">~ Limited</span></td></tr>
+        <tr><td>Live word &amp; character count</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="chk">✓</span></td><td><span class="prt">~</span></td></tr>
+        <tr><td>Unique word counter</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td></tr>
+        <tr><td>Word frequency analyser</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td></tr>
+        <tr><td>Built in find &amp; replace</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="chk">✓</span></td><td><span class="crs">✗</span></td></tr>
+        <tr><td>Download output as .txt</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="chk">✓</span></td><td><span class="prt">~</span></td></tr>
+        <tr><td>100% browser based (no upload)</td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">✗</span></td></tr>
+        <tr><td>No sign up or installation</td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="prt">~</span></td></tr>
+        <tr><td>Estimated reading time</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td><td><span class="crs">✗</span></td></tr>
+        <tr><td>Zero ads &amp; zero tracking</td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">✗ Most</span></td></tr>
+        <tr><td>Mobile friendly interface</td><td class="hl"><span class="chk">✓</span></td><td><span class="crs">✗</span></td><td><span class="prt">~</span></td><td><span class="prt">~</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══ TIPS & BEST PRACTICES ══ -->
+<section class="sw" id="tips">
+  <div class="centered">
+    <div class="eyebrow mint">Pro Tips</div>
+    <div class="sec-title">Naming Convention Best Practices</div>
+    <div class="sec-sub">Master when and how to use each case format with these professional tips for developers, writers, and SEO specialists.</div>
+  </div>
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon fi-c">🧑‍💻</div><div><h3>JavaScript &amp; TypeScript Conventions</h3><p>Use <strong>camelCase</strong> for variables and functions, <strong>PascalCase</strong> for classes and React components, and <strong>CONSTANT_CASE</strong> for module-level constants. Consistent naming significantly reduces cognitive load for teams and passes most linter rules out of the box.</p></div></div>
+    <div class="tip-card"><div class="tip-icon fi-t">🐍</div><div><h3>Python Naming Standards (PEP 8)</h3><p>Python's official style guide (PEP 8) mandates <strong>snake_case</strong> for functions, variables, and module names; <strong>PascalCase</strong> for class names; and <strong>CONSTANT_CASE</strong> for module constants. Following this keeps your code idiomatic and passes automated style checks like flake8 and pylint.</p></div></div>
+    <div class="tip-card"><div class="tip-icon fi-g">🌐</div><div><h3>SEO Friendly URL Slugs</h3><p>Search engines strongly prefer <strong>kebab-case</strong> for URL slugs (e.g. <code>how-to-convert-text-case</code>). Google treats hyphens as word separators, improving keyword recognition. Underscores are treated as word joiners, so always use hyphens in new page URLs for better organic rankings.</p></div></div>
+    <div class="tip-card"><div class="tip-icon fi-p">📝</div><div><h3>Title Case vs Sentence Case in Writing</h3><p>Use <strong>Title Case</strong> for H1 and H2 headings, blog titles, product names, and navigation links. Use <strong>Sentence case</strong> for body text, button labels, and UI copy. Most modern editorial style guides (AP, Chicago, APA) favour Title Case for headings and Sentence case for everything else.</p></div></div>
+    <div class="tip-card"><div class="tip-icon fi-m">🗄️</div><div><h3>Database Column Naming</h3><p>Most SQL databases and ORMs prefer <strong>snake_case</strong> for column and table names (<code>user_first_name</code>, <code>created_at</code>). PostgreSQL lowercases all unquoted identifiers, making snake_case the safest and most readable option, as it avoids quoting requirements and works naturally in raw queries.</p></div></div>
+    <div class="tip-card"><div class="tip-icon fi-s">⚙️</div><div><h3>Environment Variables &amp; Config Files</h3><p>Environment variables should always use <strong>CONSTANT_CASE</strong> (e.g. <code>DATABASE_URL</code>, <code>API_SECRET_KEY</code>). This is a universal convention across Linux, Docker, Kubernetes, and all major cloud platforms, making them instantly recognisable and reducing misconfiguration errors.</p></div></div>
+  </div>
+</section>
+
+<!-- ══ REFERENCE TABLE ══ -->
+<section class="sw" id="reference">
+  <div class="centered">
+    <div class="eyebrow">Quick Reference</div>
+    <div class="sec-title">Complete Case Format Reference</div>
+    <div class="sec-sub">All 12 supported formats at a glance, with input and output examples, primary languages, and common use cases.</div>
+  </div>
+  <table class="ref-table">
+    <thead>
+      <tr><th>Format</th><th>Input</th><th>Output</th><th>Language / Context</th><th>Common Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>UPPER CASE</strong></td><td>hello world</td><td><code>HELLO WORLD</code></td><td>Universal</td><td>Headings, constants, emphasis</td></tr>
+      <tr><td><strong>lower case</strong></td><td>Hello World</td><td><code>hello world</code></td><td>Universal</td><td>Normalisation, emails, URLs</td></tr>
+      <tr><td><strong>Title Case</strong></td><td>hello world</td><td><code>Hello World</code></td><td>English writing</td><td>Blog titles, H1 tags, page names</td></tr>
+      <tr><td><strong>Sentence case</strong></td><td>hello world</td><td><code>Hello world</code></td><td>English writing</td><td>Body copy, UI labels, descriptions</td></tr>
+      <tr><td><strong>camelCase</strong></td><td>hello world</td><td><code>helloWorld</code></td><td>JS, Java, Swift, TS</td><td>Variable &amp; function names</td></tr>
+      <tr><td><strong>PascalCase</strong></td><td>hello world</td><td><code>HelloWorld</code></td><td>C#, React, TypeScript</td><td>Class names, React components</td></tr>
+      <tr><td><strong>snake_case</strong></td><td>hello world</td><td><code>hello_world</code></td><td>Python, Ruby, SQL</td><td>Variables, DB columns, files</td></tr>
+      <tr><td><strong>kebab-case</strong></td><td>hello world</td><td><code>hello-world</code></td><td>HTML, CSS, URLs</td><td>CSS classes, URL slugs, CLI flags</td></tr>
+      <tr><td><strong>CONSTANT_CASE</strong></td><td>hello world</td><td><code>HELLO_WORLD</code></td><td>All languages</td><td>Constants, environment variables</td></tr>
+      <tr><td><strong>dot.case</strong></td><td>hello world</td><td><code>hello.world</code></td><td>Java, Kotlin, Config</td><td>Package names, config keys</td></tr>
+      <tr><td><strong>aLtErNaTiNg</strong></td><td>hello world</td><td><code>hElLo WoRlD</code></td><td>Social / Memes</td><td>Humour, sarcasm, meme text</td></tr>
+      <tr><td><strong>iNVERSE</strong></td><td>Hello World</td><td><code>hELLO wORLD</code></td><td>Creative / Design</td><td>Typography, creative effects</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══ RELATED TOOLS ══ -->
+<section class="sw-bg bg-warm" id="tools">
+  <div class="inner centered">
+    <div class="eyebrow teal">Free Text Tools</div>
+    <div class="sec-title">More Tools Coming to Case Converter</div>
+    <div class="sec-sub">We're building a complete suite of free text utilities: no sign up, no tracking, all browser based.</div>
+  </div>
+  <div class="inner">
+    <div class="tools-grid">
+      <div class="tool-card"><span class="tool-icon">🔢</span><h3>Word Counter</h3><p>Detailed word, character, sentence, and paragraph analysis.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">📋</span><h3>Lorem Ipsum Generator</h3><p>Generate placeholder text for mockups and design work.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">🔗</span><h3>URL Slug Generator</h3><p>Turn any title into an SEO friendly kebab-case URL slug.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">🔤</span><h3>Text Reverser</h3><p>Reverse any string by word or character order.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">🧹</span><h3>Duplicate Line Remover</h3><p>Clean lists by removing duplicate and empty lines.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">↕️</span><h3>Line Sorter</h3><p>Sort lines alphabetically, numerically, or in reverse.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">🎨</span><h3>ASCII Art Generator</h3><p>Convert text into ASCII art for banners and comments.</p><span class="soon">Coming Soon</span></div>
+      <div class="tool-card"><span class="tool-icon">📊</span><h3>Readability Scorer</h3><p>Analyse Flesch-Kincaid readability score and grade level.</p><span class="soon">Coming Soon</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sw" id="faq" style="max-width:860px">
+  <div class="centered">
+    <div class="eyebrow">FAQ</div>
+    <div class="sec-title">Frequently Asked Questions</div>
+    <div class="sec-sub">Everything you need to know about Case Converter and text case conversion.</div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">Is Case Converter completely free to use? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">Yes. Case Converter is 100% free with no subscription, no sign up, and no hidden charges. All features including the converter, download, find & replace, and word frequency analysis are available to everyone, forever.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">Is my text stored or sent to a server? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">No. All processing happens entirely in your browser using JavaScript. Your text is never sent to any server, stored in a database, or shared in any way. You can even use Case Converter offline after the initial page load. Your data is 100% private.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">What is the difference between camelCase and PascalCase? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">Both formats join words and capitalise boundaries. The only difference is the first letter: camelCase starts lowercase (<code>helloWorld</code>) while PascalCase starts uppercase (<code>HelloWorld</code>). camelCase is for variables/functions in JavaScript and Java; PascalCase is for class names, React components, and C# types.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">What is the difference between snake_case and kebab-case? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">Both use all lowercase with a separator. snake_case uses an underscore (<code>hello_world</code>), standard in Python, Ruby, and SQL. kebab-case uses a hyphen (<code>hello-world</code>), standard for CSS classes, HTML attributes, URL slugs, and REST API keys.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">Why should I use kebab-case for URL slugs? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">Google treats hyphens as word separators in URLs, improving keyword recognition for SEO. Underscores are treated as word connectors, meaning <code>how_to_convert_text</code> might be read as one word. For better organic search performance, always use <code>how-to-convert-text</code> (kebab-case) in new page URLs.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">Is there a character or word limit? <span class="arr">▾</span></div><div class="faq-a"><div class="faq-a-inner">There is no enforced character limit. Since all processing is local in your browser, the practical limit depends only on your device's memory. Case Converter handles documents, code files, and articles of any typical size easily. Very large files (multiple megabytes) may feel slightly slower on older devices.</div></div></div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ══ -->
+<div class="cta-wrap">
+  <div class="cta-banner">
+    <h2>Ready to Convert Your Text?</h2>
+    <p>Join thousands of developers, writers, and marketers who use Case Converter daily to save time and stay consistent.</p>
+    <div class="cta-btns">
+      <a href="#converter" class="cta-p">Start Converting Now →</a>
+      <a href="#case-formats" class="cta-s">Browse All Case Formats</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#" class="foot-logo">Case <span>Converter</span></a>
+        <p>The free, fast, and private text case converter built for developers, writers, SEO professionals, and data analysts. All processing is client side, and zero data ever leaves your device.</p>
+        <div class="foot-badges">
+          <span class="foot-badge">🔒 100% Private</span>
+        </div>
+      </div>
+      <div class="foot-col"><h4>Tool</h4><ul><li><a href="#converter">Case Converter</a></li><li><a href="#word-freq">Word Frequency</a></li><li><a href="#converter">Find &amp; Replace</a></li><li><a href="#converter">Space Trimmer</a></li><li><a href="#converter">Text Download</a></li></ul></div>
+      <div class="foot-col"><h4>Learn</h4><ul><li><a href="#case-formats">All Case Formats</a></li><li><a href="#how-to-use">How to Use</a></li><li><a href="#tips">Naming Conventions</a></li><li><a href="#reference">Quick Reference</a></li><li><a href="#comparison">Tool Comparison</a></li></ul></div>
+      <div class="foot-col"><h4>By Use Case</h4><ul><li><a href="#use-cases">For Developers</a></li><li><a href="#use-cases">For Writers</a></li><li><a href="#use-cases">For SEO</a></li><li><a href="#use-cases">For Data Analysts</a></li><li><a href="#tools">More Tools</a></li></ul></div>
+    </div>
+    <div class="foot-btm">
+      <p>© 2025 Case Converter · Built with ♥ for the open web · All text processing is 100% client side</p>
+      <div class="foot-btm-links"><a href="#faq">FAQ</a><a href="#tips">Best Practices</a><a href="#reference">Reference</a><a href="#tools">More Tools</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+function toUpper(t){return t.toUpperCase()}
+function toLower(t){return t.toLowerCase()}
+function toTitle(t){return t.replace(/\w\S*/g,w=>w.charAt(0).toUpperCase()+w.substr(1).toLowerCase())}
+function toSentence(t){return t.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g,c=>c.toUpperCase())}
+function toCamel(t){return t.replace(/[-_\s]+(.)/g,(_,c)=>c.toUpperCase()).replace(/^[A-Z]/,c=>c.toLowerCase()).replace(/[^a-zA-Z0-9]/g,'')}
+function toPascal(t){const c=toCamel(t);return c.charAt(0).toUpperCase()+c.slice(1)}
+function toSnake(t){return t.toLowerCase().replace(/[\s\-\.]+/g,'_').replace(/[^a-z0-9_]/g,'')}
+function toKebab(t){return t.toLowerCase().replace(/[\s\_\.]+/g,'-').replace(/[^a-z0-9\-]/g,'')}
+function toConstant(t){return t.toUpperCase().replace(/[\s\-\.]+/g,'_').replace(/[^A-Z0-9_]/g,'')}
+function toDot(t){return t.toLowerCase().replace(/[\s\-\_]+/g,'.').replace(/[^a-z0-9\.]/g,'')}
+function toAlt(t){return t.split('').map((c,i)=>i%2===0?c.toLowerCase():c.toUpperCase()).join('')}
+function toInv(t){return t.split('').map(c=>c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')}
+const cvt={upper:toUpper,lower:toLower,title:toTitle,sentence:toSentence,camel:toCamel,pascal:toPascal,snake:toSnake,kebab:toKebab,constant:toConstant,dot:toDot,alternate:toAlt,inverse:toInv};
+let ac='upper';
+document.getElementById('inputText').addEventListener('input',ua);
+document.querySelectorAll('.cb').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.cb').forEach(x=>x.classList.remove('active'));b.classList.add('active');ac=b.dataset.case;ua()})});
+function ua(){const v=document.getElementById('inputText').value;document.getElementById('outputText').value=cvt[ac]?cvt[ac](v):v;updateStats(v);updateFreq(v)}
+function updateStats(t){
+  const c=t.length;
+  const wa=t.trim()===''?[]:t.trim().split(/\s+/).filter(w=>w.length>0);
+  const w=wa.length,u=new Set(wa.map(x=>x.toLowerCase())).size;
+  const s=t.trim()===''?0:(t.match(/[^.!?]*[.!?]/g)||[]).length;
+  const l=t.trim()===''?0:t.split('\n').length;
+  const rs=Math.ceil(w/3.5),rd=rs<60?rs+'s':Math.ceil(rs/60)+'m';
+  document.getElementById('charCount').textContent=c;
+  document.getElementById('wordCount').textContent=w;
+  document.getElementById('sentCount').textContent=s;
+  document.getElementById('lineCount').textContent=l;
+  document.getElementById('readTime').textContent=rd||'0s';
+  document.getElementById('uniqueCount').textContent=u;
+}
+function updateFreq(t){
+  const g=document.getElementById('freqGrid');
+  if(!t.trim()){g.innerHTML='<div class="freq-empty">Start typing in the converter above to see word frequency analysis.</div>';return}
+  const ws=t.toLowerCase().replace(/[^a-z0-9\s]/g,'').split(/\s+/).filter(w=>w.length>2);
+  const fr={};ws.forEach(w=>fr[w]=(fr[w]||0)+1);
+  const sr=Object.entries(fr).sort((a,b)=>b[1]-a[1]).slice(0,24);
+  if(!sr.length){g.innerHTML='<div class="freq-empty">No significant words found yet.</div>';return}
+  g.innerHTML=sr.map(([w,c])=>`<div class="fi"><span class="fw">${esc(w)}</span><span class="fc">${c}</span></div>`).join('');
+}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function copyOutput(){const t=document.getElementById('outputText').value;if(!t){toast('Nothing to copy!');return}navigator.clipboard.writeText(t).then(()=>{toast('✓ Copied to clipboard!');const f=document.getElementById('cpfb');f.classList.add('show');setTimeout(()=>f.classList.remove('show'),2000)}).catch(()=>{document.getElementById('outputText').select();document.execCommand('copy');toast('✓ Copied!')})}
+function downloadOutput(){const t=document.getElementById('outputText').value;if(!t){toast('Nothing to download!');return}const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));a.download='case-converter-output.txt';a.click();toast('⬇️ Download started!')}
+function clearAll(){document.getElementById('inputText').value='';document.getElementById('outputText').value='';updateStats('');updateFreq('');toast('🗑️ Cleared!')}
+function swapText(){const i=document.getElementById('inputText'),p=document.getElementById('outputText').value;if(!p){toast('Nothing to swap!');return}i.value=p;ua();toast('⇄ Swapped!')}
+function removeSpaces(){const i=document.getElementById('inputText');i.value=i.value.replace(/\s+/g,' ').trim();ua();toast('✂️ Spaces trimmed!')}
+function toggleFR(){const p=document.getElementById('frPanel'),a=document.getElementById('frArrow');p.classList.toggle('open');a.textContent=p.classList.contains('open')?'▴':'▾'}
+function doReplace(){const f=document.getElementById('frFind').value,r=document.getElementById('frReplace').value;if(!f){toast('Please enter a search term!');return}const i=document.getElementById('inputText'),re=new RegExp(f.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'),n=(i.value.match(re)||[]).length;i.value=i.value.replace(re,r);ua();toast(`✓ Replaced ${n} instance${n!==1?'s':''}!`)}
+function tFaq(el){const item=el.closest('.faq-item'),o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!o)item.classList.add('open')}
+window.addEventListener('scroll',()=>document.getElementById('backTop').classList.toggle('vis',scrollY>400));
+let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2400)}
+</script>
+</body>
+</html>
